@@ -1,0 +1,9 @@
+PowerUpDuration,15
+EasyPaddleSpeed,10
+MediumPaddleSpeed,15
+HardPaddleSpeed,20
+PaddleSpeed,50
+SpawnBrickChance,0.7
+ExplodingBrickSpawnChance,0.1
+SpawnPowerUpChance,0.1
+SpawnCoinChance,0.1

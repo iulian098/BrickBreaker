@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af54e110b9042943b236a77b7d3bca0, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  difficulties: 0a0000000f00000014000000
+  balls:
+  - name: White
+    price: 0
+    sprite: {fileID: 21300000, guid: e390ab2ba6898404ba1d44c9a83fa950, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Green
+    price: 10
+    sprite: {fileID: 21300000, guid: 63ef1f2c3492545469ac7197f9873dbe, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Red
+    price: 10
+    sprite: {fileID: 21300000, guid: 8d3eff6ee3743c942962fd5f3b09e941, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Blue
+    price: 10
+    sprite: {fileID: 21300000, guid: 89b264d6eb3d1eb499bd052d17fe389d, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Skull
+    price: 40
+    sprite: {fileID: 21300000, guid: 39c89445c84c1ad41af9a5df19854869, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Smile
+    price: 40
+    sprite: {fileID: 21300000, guid: 96a35b9a3f11f5c4d8216dadc5baf269, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Heart
+    price: 40
+    sprite: {fileID: 21300000, guid: 113fcb7ab720a6b4191c231291eb9743, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 0
+  - name: Disco
+    price: 50
+    sprite: {fileID: 21300000, guid: 89b264d6eb3d1eb499bd052d17fe389d, type: 3}
+    changeMaterial: 1
+    material: {fileID: 2100000, guid: 66b3c6f280c541a47a96d79acc144de6, type: 2}
+    Unlocked: 1
+  paddles:
+  - name: White
+    price: 0
+    sprite: {fileID: 21300000, guid: b4356046f24f6d64686187b20d0df45a, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Blue
+    price: 10
+    sprite: {fileID: 21300000, guid: 33c44234752fe34449b44d57444bff8a, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Green
+    price: 10
+    sprite: {fileID: 21300000, guid: 8d3777dfc8f1d5541ab9b483cfe513dc, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  - name: Red
+    price: 10
+    sprite: {fileID: 21300000, guid: 7ff8a08164d208840a9d2f52541218ff, type: 3}
+    changeMaterial: 0
+    material: {fileID: 0}
+    Unlocked: 1
+  brickSkins:
+  - name: 1
+    normalBrick: {fileID: 21300000, guid: fe40e95861242df4f98665a5675feb88, type: 3}
+    metalBrick: {fileID: 21300000, guid: e4a215fc9c37c834ab349c9091c1b6d7, type: 3}
+    price: 0
+    unlocked: 1
+  - name: 2
+    normalBrick: {fileID: 21300000, guid: d1fc7a2d9a24f0e46812394340faf202, type: 3}
+    metalBrick: {fileID: 21300000, guid: 2b2aab194a52e1e45909e2cedb8504d8, type: 3}
+    price: 100
+    unlocked: 1
+  - name: 3
+    normalBrick: {fileID: 21300000, guid: 5011f1d00aa8d524280657b9c4caed93, type: 3}
+    metalBrick: {fileID: 21300000, guid: f45b9ff5e4a674b498459ed4f550ac9b, type: 3}
+    price: 100
+    unlocked: 1
+  ballButtonPrefab: {fileID: 5596121303121146586, guid: 2f49af3aa372fe94f9c2a0f7e0b1c35e, type: 3}
+  paddleButtonPrefab: {fileID: 0}
+  powerUpPrefab: {fileID: 5374887738715723790, guid: 10c9c51d8c333e346a35ba481d402cfd, type: 3}
+  coinPrefab: {fileID: 6237617741186350134, guid: 9296575f6b58df44fb8d0ed3912ae465, type: 3}
+  ballHitEffect: {fileID: 9122237576008803127, guid: 87bf9840056337643b012e9a985b52db, type: 3}
+  brickParticles: {fileID: 7542736027264976830, guid: 8f2d90a18d7282743be18eebf1fc1309, type: 3}
+  brickExplosionParticles: {fileID: 6284577240501054564, guid: c9a4646fe47a31e44965870085b06489, type: 3}
+  brickPrefab: {fileID: 197669363316872951, guid: 6f4906c29987a2145a68f512ab5f9065, type: 3}
+  explodingBrickPrefab: {fileID: 2987965186651666722, guid: 915d511d2cfd4f04682f205b99d742e2, type: 3}
+  metalBrickPrefab: {fileID: 3761920879324779793, guid: ff08ab466fffeba49b9126e87f8c1be5, type: 3}
+  strongerBrickPrefab: {fileID: 1767920873025676371, guid: e5374ff1d8b009b45887c3637908b684, type: 3}
+  defaultBallMaterial: {fileID: 2100000, guid: 3618a4162fda9ed4d89932e0cda303c3, type: 2}
+  selectedBall: 4
+  selectedPaddle: 0
+  selectedBrick: 2
+  inputType: 0
+  timePowerupSpawn: 5
+  PowerUpDuration: 15
+  paddleSpeed: 35
+  coins: 513
+  totalLevels: 500
+  levelNumber: 503
+  bricksSpawnChance: 0.7
+  levelExplodingBricks: 25
+  explodingBricksSpawnChance: 0.1
+  levelMetalBrick: 50
+  metalBrickSpawnChance: 0.075
+  levelStrongBrick: 100
+  strongBrickSpawnChance: 0.075
+  spawnPowerUpChance: 0.1
+  spawnCoinsChance: 0.1
+  testing: 0
+  testingLevel: []
+  buttonClickAudio: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+  powerUpPickupAudio: {fileID: 8300000, guid: 8ce14858148c08a459f93602337335eb, type: 3}
+  coinPickupAudio: {fileID: 8300000, guid: c952c74dd0dfb5c44b632b0c5564c936, type: 3}
+  winAudio: {fileID: 8300000, guid: 24353dbe559990d418b1aed10cbb1924, type: 3}
+  loseAudio: {fileID: 8300000, guid: 1d2f348735857f047b7a5defd60d930a, type: 3}
+  hitAudio: {fileID: 8300000, guid: b43d102aac6b145468dcaa94a5cccae1, type: 3}
+  brickDestroyAudio: {fileID: 8300000, guid: 525e46c77be971c478ab66347c19e920, type: 3}
+  brickExplosionAudio: {fileID: 8300000, guid: b99da9a57308d4ba1bee1cf1d9038376, type: 3}
+  music: []
+  brickColors:
+  - {r: 0, g: 0.8584906, b: 0.114465505, a: 1}
+  - {r: 0.003915994, g: 0.54180336, b: 0.8301887, a: 1}
+  - {r: 0.78739345, g: 0.8679245, b: 0.012281928, a: 1}
+  - {r: 0.42415294, g: 0.0040939935, b: 0.8679245, a: 1}
+  - {r: 0.7924528, g: 0.28527716, b: 0.23549305, a: 1}
+  - {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  - {r: 0, g: 0.8207547, b: 0.74710935, a: 1}
+  androidObjects: []
