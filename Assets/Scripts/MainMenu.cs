@@ -380,6 +380,6 @@ public class MainMenu : MonoBehaviour
 
     public void ChangeInputType(Dropdown dropdown)
     {
-        data.inputType = dropdown.value;
+        data.inputType = (GameData.InputType)dropdown.value;
     }
 }

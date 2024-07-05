@@ -5,6 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewData", menuName = "GameData")]
 public class GameData : ScriptableObject
 {
+    public enum InputType {
+        Touch,
+        Keyboard,
+        Mouse
+    }
+
     public int[] difficulties;
     [Header("Shop")]
     public List<BallShopClass> balls = new List<BallShopClass>();
@@ -39,7 +45,7 @@ public class GameData : ScriptableObject
     public int selectedPaddle;
     public int selectedBrick;
 
-    public int inputType;
+    public InputType inputType;
 
     [Header("PowerUps data")]
     public float timePowerupSpawn = 5f;

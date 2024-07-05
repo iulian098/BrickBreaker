@@ -25,31 +25,31 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 63ef1f2c3492545469ac7197f9873dbe, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Red
     price: 10
     sprite: {fileID: 21300000, guid: 8d3eff6ee3743c942962fd5f3b09e941, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Blue
     price: 10
     sprite: {fileID: 21300000, guid: 89b264d6eb3d1eb499bd052d17fe389d, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Skull
     price: 40
     sprite: {fileID: 21300000, guid: 39c89445c84c1ad41af9a5df19854869, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Smile
     price: 40
     sprite: {fileID: 21300000, guid: 96a35b9a3f11f5c4d8216dadc5baf269, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Heart
     price: 40
     sprite: {fileID: 21300000, guid: 113fcb7ab720a6b4191c231291eb9743, type: 3}
@@ -61,7 +61,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 89b264d6eb3d1eb499bd052d17fe389d, type: 3}
     changeMaterial: 1
     material: {fileID: 2100000, guid: 66b3c6f280c541a47a96d79acc144de6, type: 2}
-    Unlocked: 1
+    Unlocked: 0
   paddles:
   - name: White
     price: 0
@@ -74,19 +74,19 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 33c44234752fe34449b44d57444bff8a, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Green
     price: 10
     sprite: {fileID: 21300000, guid: 8d3777dfc8f1d5541ab9b483cfe513dc, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   - name: Red
     price: 10
     sprite: {fileID: 21300000, guid: 7ff8a08164d208840a9d2f52541218ff, type: 3}
     changeMaterial: 0
     material: {fileID: 0}
-    Unlocked: 1
+    Unlocked: 0
   brickSkins:
   - name: 1
     normalBrick: {fileID: 21300000, guid: fe40e95861242df4f98665a5675feb88, type: 3}
@@ -97,12 +97,12 @@ MonoBehaviour:
     normalBrick: {fileID: 21300000, guid: d1fc7a2d9a24f0e46812394340faf202, type: 3}
     metalBrick: {fileID: 21300000, guid: 2b2aab194a52e1e45909e2cedb8504d8, type: 3}
     price: 100
-    unlocked: 1
+    unlocked: 0
   - name: 3
     normalBrick: {fileID: 21300000, guid: 5011f1d00aa8d524280657b9c4caed93, type: 3}
     metalBrick: {fileID: 21300000, guid: f45b9ff5e4a674b498459ed4f550ac9b, type: 3}
     price: 100
-    unlocked: 1
+    unlocked: 0
   ballButtonPrefab: {fileID: 5596121303121146586, guid: 2f49af3aa372fe94f9c2a0f7e0b1c35e, type: 3}
   paddleButtonPrefab: {fileID: 0}
   powerUpPrefab: {fileID: 5374887738715723790, guid: 10c9c51d8c333e346a35ba481d402cfd, type: 3}
@@ -115,16 +115,16 @@ MonoBehaviour:
   metalBrickPrefab: {fileID: 3761920879324779793, guid: ff08ab466fffeba49b9126e87f8c1be5, type: 3}
   strongerBrickPrefab: {fileID: 1767920873025676371, guid: e5374ff1d8b009b45887c3637908b684, type: 3}
   defaultBallMaterial: {fileID: 2100000, guid: 3618a4162fda9ed4d89932e0cda303c3, type: 2}
-  selectedBall: 4
+  selectedBall: 0
   selectedPaddle: 0
-  selectedBrick: 2
-  inputType: 0
+  selectedBrick: 0
+  inputType: 2
   timePowerupSpawn: 5
   PowerUpDuration: 15
   paddleSpeed: 35
-  coins: 513
+  coins: 0
   totalLevels: 500
-  levelNumber: 503
+  levelNumber: 1
   bricksSpawnChance: 0.7
   levelExplodingBricks: 25
   explodingBricksSpawnChance: 0.1

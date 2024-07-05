@@ -36,7 +36,7 @@ public class LevelGenerator : MonoBehaviour
 
         //float tempYOffset = yOffset * Camera.main.orthographicSize;
         //yOffset = tempYOffset;
-
+        Vector2 bounds = GameManager.GetBounds();
         if (LevelManager.data.testing)
         {
             LevelManager.spawnedBricks = new List<GameObject>();
@@ -73,8 +73,6 @@ public class LevelGenerator : MonoBehaviour
         }
         else
         {
-
-
             //Get spawn rates
             SpawnRate = LevelManager.data.bricksSpawnChance;
             explosionBrickSpawnRate = LevelManager.data.explodingBricksSpawnChance;
@@ -104,6 +102,8 @@ public class LevelGenerator : MonoBehaviour
                 GameObject newBrick = null;
                 foreach (BrickData bd in levelBricksLocation)
                 {
+                    if (bd.position.x < -(bounds.x - 2) || bd.position.x > bounds.x - 2) continue;
+
                     //Check for brick type and spawn it
                     switch (bd.brickType)
                     {
@@ -146,26 +146,25 @@ public class LevelGenerator : MonoBehaviour
 
         //Calculate the distance between the x bound
         if (autoColums)
-        {
             maxColumns = (int)GameManager.GetBounds().x / 2 - 1;
-        }
 
         //Calculate the distance between cented and y bound
         if (autoRows)
-        {
             maxRows = (int)GameManager.GetBounds().y - 2 - (int)yOffset;
-        }
 
         //Assign random number of rown and columns
         columns = Random.Range(minColumns, maxColumns + 1);
         rows = Random.Range(minRows, maxRows + 1);
 
-
+        Vector2 bounds = GameManager.GetBounds();
         //Start spawning bricks
         for (int i = 0; i < columns; i++)
         {
             //Set brick x position
             brickPosition.x = i * spacing.x;
+
+            if (brickPosition.x < -(bounds.x - 2) || brickPosition.x > bounds.x - 2)
+                continue;
 
             for (int j = 0; j < rows; j++)
             {
@@ -178,6 +177,7 @@ public class LevelGenerator : MonoBehaviour
 
                 //Set brick y position
                 brickPosition.y = j * spacing.y + yOffset;
+
                 if (chance <= SpawnRate)
                 {
                     bool skipBrick = false;

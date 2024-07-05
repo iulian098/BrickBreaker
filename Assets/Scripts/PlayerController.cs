@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class PlayerController : MonoBehaviour
 {
     public static bool magnetActive;
@@ -16,9 +15,8 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     public Vector2 bounds;
-    Touch touchInput;
+    float targetXPosition;
 
-    static float horizontalInput;
     private void Start()
     {
         //Set speed
@@ -44,27 +42,42 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float h = 0;
+        Vector3 pos = transform.position;
+
         //Get horizontal input
-        if (LevelManager.data.inputType == 1)
+        switch (LevelManager.data.inputType) {
+            case GameData.InputType.Touch:
+
+                break;
+            case GameData.InputType.Keyboard:
+                if (Input.GetAxisRaw("Horizontal") < 0)
+                    h = -1;
+                else if (Input.GetAxisRaw("Horizontal") > 0)
+                    h = 1;
+                break;
+            case GameData.InputType.Mouse:
+                
+                break;
+            default:
+                break;
+        }
+
+        if (LevelManager.data.inputType == GameData.InputType.Touch)
         {
-            float dir = Input.acceleration.x;
+            /*float dir = Input.acceleration.x;
             if (dir < -0.1f)
                 h = -1;
             else if (dir > 0.1f)
                 h = 1;
 
-            Debug.Log("<color=yellow>" + dir + "</color>");
+            Debug.Log("<color=yellow>" + dir + "</color>");*/
         }
         else
         {
-            if (SimpleInput.GetAxisRaw("Horizontal") < 0)
-                h = -1;
-            else if (SimpleInput.GetAxisRaw("Horizontal") > 0)
-                h = 1;
+            targetXPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+            pos.x = Mathf.Lerp(pos.x, targetXPosition, speed * Time.deltaTime);
         }
 
-        //Move the paddle
-        Vector3 pos = transform.position;
 
         //Move paddle
         pos.x += h * speed * Time.deltaTime;

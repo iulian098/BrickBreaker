@@ -229,9 +229,7 @@ public class LevelManager : MonoBehaviour
 
     void SetWalls()
     {
-
         GameManager.setWalls(leftWall.transform, rightWall.transform, topWall.transform, gameOverTrigger.transform);
-
     }
 
     #region Win/Lose
@@ -381,15 +379,11 @@ public class LevelManager : MonoBehaviour
         if(powersActive["BigBall"])
         {
             foreach (Ball b in balls)
-            {
                 b.gameObject.transform.localScale = new Vector3(1.5f, 1.5f, 1);
-            }
         }else if(powersActive["SmallBall"])
         {
             foreach (Ball b in balls)
-            {
                 b.gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1);
-            }
         }
     }
 
@@ -444,9 +438,7 @@ public class LevelManager : MonoBehaviour
 
         }
         else
-        {
             StartCoroutine(MagnetPower(data.PowerUpDuration));
-        }
 
         audioManager.PlayOneShot(data.powerUpPickupAudio);
     }
@@ -539,19 +531,14 @@ public class LevelManager : MonoBehaviour
         foreach(Collider2D coll in colls)
         {
             if (coll.tag == "Brick")
-            {
                 EventManager.addScoreEvent.Invoke(coll.gameObject);
-            }
             else if(coll.tag == "ExplodingBrick")
             {
                 EventManager.addScoreEvent.Invoke(coll.gameObject);
-
                 EventManager.explodeEvent.Invoke(coll.gameObject);
             }
             else if(coll.tag == "StrongBrick")
-            {
                 EventManager.brickDamageEvent.Invoke(coll.GetComponent<StrongBrick>());
-            }
         }
 
         audioManager.PlayOneShot(data.brickExplosionAudio);
@@ -566,14 +553,11 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         foreach(GameObject b in spawnedBricks)
-        {
             b.SetActive(true);
-        }
 
         foreach(Image img in lifesImages)
-        {
             img.sprite = heartFill;
-        }
+
         lifes = 2;
         score = 0;
         collectedCoins = 0;
